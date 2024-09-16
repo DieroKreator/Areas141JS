@@ -30,3 +30,19 @@ test('calcular area paralelogramo 8 * 6', () => {
     expect(resultadoObtido).toBe(resultadoEsperado)
     console.log(`${resultadoObtido} = ${resultadoEsperado}`)
 })
+
+test('calcular area triangulo 5 * 3', () => {
+
+    const base = 5
+    console.log(`base = ${base}`)
+    const altura = 3
+    console.log(`altura = ${altura}`)
+    const resultadoEsperado = 7.5
+    console.log(`resultadoEsperado = ${resultadoEsperado}`)
+
+    const resultadoObtido = calculadoraArea.calcularAreaTriangulo(base, altura)
+    console.log(`resultadoObtido = ${resultadoObtido}`)
+
+    expect(resultadoObtido).toBe(resultadoEsperado)
+    console.log(`${resultadoObtido} = ${resultadoEsperado}`)
+})
