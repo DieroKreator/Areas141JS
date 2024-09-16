@@ -46,3 +46,20 @@ test('calcular area triangulo 5 * 3', () => {
     expect(resultadoObtido).toBe(resultadoEsperado)
     console.log(`${resultadoObtido} = ${resultadoEsperado}`)
 })
+
+// Teste Direcionado por Dados
+let massaAreaParalelogramo = [
+    [7, 5, 35],
+    [10, 7, 70],
+    [20, 16, 320],
+    [40, 32, 1280],
+    [100, 70, 7000]
+]
+
+test.each(massaAreaParalelogramo)('calcular area paralelogramo %f / %f', (base, altura, resultadoEsperado) => {
+    
+    const resultadoObtido = calculadoraArea.calcularAreaParalelogramo(base, altura)
+
+    expect(resultadoObtido).toBe(resultadoEsperado)
+    console.log(`${resultadoObtido} = ${resultadoEsperado}`)
+})
